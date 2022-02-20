@@ -1,0 +1,30 @@
+extends index 
+block contenido 
+     
+     header.header.texto-centrado
+        h1 Datos del Usuario
+
+     if(user.length)
+          each element in user
+               .contenedor-tarjetas
+                    .propietario
+                         h2.texto-centrado  #{element.name}
+                         h2.texto-centrado #{element.last_name}
+
+                    .contenido-tarjetas
+                         .tarjeta-debito
+                              header.header-tarjeta.texto-centrado
+                                   h3 Tarjeta de Debito
+                              p Numero de Tarjeta: #{element.number_debit}
+                              p Saldo: $#{element.debit_balance}
+                              p.cvv CVV: #{element.debit_cvv}
+
+                         .tarjeta-credito
+                              header.header-tarjeta.texto-centrado
+                                   h3 Tarjeta de Credito
+                              p Numero de Tarjeta: :#{element.number_credit}
+                              p Saldo: #{element.credit_cvv}
+                              p.cvv CVV $#{element.credit_balance}
+
+                         a(href="/transactions" class="btn-realizar-operacion texto-centrado") Realizar Operacion
+     

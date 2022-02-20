@@ -1,3 +1,285 @@
+*{
+   box-sizing: border-box;
+}
 body{
    font-family: 'Oswald', Georgia, 'Times New Roman', Times, serif;
+}
+/* Estilo al header */
+
+:root{
+   --naranja: rgb(231, 68, 8);
+   --negro: #000;
+   --gris: #3f3f3f;
+}
+.header {
+   width: 100%;
+   height: 100px;
+   background-color: var(--negro);
+   color: var(--naranja);
+   margin-top: 0;
+   display: flex;
+}
+
+
+/* Estilos generales*/
+a {
+   text-decoration: none;
+}
+.texto-centrado {
+   text-align: center;
+   justify-content: center;
+   align-items: center;
+}
+
+.ph2{
+   padding: 20px;
+}
+
+h2, h1{
+   font-family: 'Oswald', Arial, Helvetica, sans-serif;
+   text-transform: uppercase;
+}
+
+
+/*----------------- Fin Estilos Generales ------------------------ */
+
+/* Estilos a los contenedores*/
+.container {
+   display: flex;
+}
+
+
+.main-container{
+   margin: 0 auto;
+   display: block;
+   width: 800px;
+   height: 400px;
+   color: var(--naranja);
+}
+.container-signup{
+   margin: 30px auto;
+   padding: 10px;
+   width: 400px;
+   height: 350px;
+   background-color: var(--negro);
+}
+.container-signup label {
+   color: var(--naranja);
+   display: block;
+   width: 100%;
+   padding: 10px;
+}
+.container-signup form {
+   width: 100%;
+}
+.container-tarjeta{
+   padding: 20px;
+}
+
+.transactions-container{
+   margin: 0 auto;
+   height: 100%;
+   width: 600px;
+}
+.form-container{
+   margin: 200px auto;
+   border-radius: 20px;
+   border: 2px solid white;
+   width: 500px;
+   height: 300px;
+   background-color: var(--negro);
+}
+
+.container-buttons{
+   display: flex;
+   justify-content: space-around;
+   width: 100%;
+}
+
+/* ---------------- Fin estilos contenedores -------------------*/
+/* Estilos a los modales  */
+.modal{
+   width: 100%;
+   height: 100vh;
+   opacity: 0.2;
+   z-index: 100;
+}
+
+.modal-retirar.show{
+   position: absolute;
+   opacity: 1;
+   top: 0;
+   z-index: 200;
+   background-color: rgba(23,23,23,0.9);
+
+} 
+
+.modal-depositar.show{
+   position: absolute;
+   opacity: 1;
+   top: 0;
+   z-index: 400;
+   background-color: rgba(23,23,23,0.9);
+} 
+
+.modal-pagar.show{
+   position: absolute;
+   opacity: 1;
+   top: 0;
+   z-index: 600;
+   background-color: rgba(23,23,23,0.9);
+} 
+
+
+
+/* ---------------- Fin estilos Modales -------------------*/
+
+
+/* ---------------- Estilos  a enlaces y botones -------------------*/
+
+
+.btn{
+   padding: 10px;
+   background-color: var(--negro);
+   color: var(--naranja);
+   width: 40%;
+   transition: .5s all ease-in-out;
+}
+
+.btn:hover{
+   
+   background-color: var(--naranja);
+   color: white;
+
+}
+.btn-transaccion{
+   min-width: 100%;
+   min-height: 100px;
+   margin-top: 30px;
+   display: block;
+   width: 300px;
+   text-align: center;
+   font-size: 3rem;
+   text-transform: uppercase;
+}
+
+.btn-enviar{
+   width: 100%;
+   border: none;
+   padding: 10px;
+   height: 30px;
+   margin-top: 25px;
+}
+.campo-enviar-tarjeta{
+   margin-top: 15px;
+}
+
+.campo-enviar-tarjeta .btn{ 
+   border-radius: 10px;
+   background-color: var(--naranja);
+   color: white;
+}
+.campo-enviar-tarjeta .btn:hover{ 
+   border-color: white;
+   cursor: pointer;
+   font-size: 20px;
+}
+
+.campos{
+   min-width: 100%;
+   padding: 20px;
+}
+
+.campo-form{
+   margin: 0 auto;
+   padding: 15px;
+   min-width: 100%;
+   padding: 10px;
+   height: 50px;
+} 
+
+.btn-enviar{
+   margin-top: 30px;
+   background-color: var(--naranja);
+   color: var(--negro);
+}
+
+.texto-grande{
+   font-size: 2rem;
+}
+.field{
+   display: block;
+}
+
+.nombre-tarjeta{
+   background-color: var(--naranja);
+   color: white;
+   padding: 10px;
+}
+.campo-tarjeta{
+   min-width: 100%;
+   margin-top: 10px;
+   height: 30px;
+   border-radius: 5px;
+}
+
+/* ---------------- Estilos a las cards ------------------------- */
+.contenedor-principal-tarjetas{
+   display: flex;
+}
+.contenedor-tarjetas {
+   min-width: 100%;
+   min-height: 100vh;
+   background-image: url('../img/bg.png');
+   background-repeat: no-repeat;
+   background-size: cover;
+   display: flex;
+}
+.header-tarjeta{
+   background-color: var(--naranja);
+   color: white;
+   padding: 10px;
+   font-size: 15px;
+}
+
+.propietario{
+   width: 300px;
+   height: 100vh;
+   color: var(--naranja);
+   background-color: #3f3f3f;
+}
+
+.contenido-tarjetas{
+   display: block;
+   margin: 30px auto;
+}
+
+
+.tarjeta-debito, .tarjeta-credito {
+   margin-bottom: 20px;
+   width: 400px;
+   height: 250px;
+   border-radius: 10px;
+   background-color: rgba(23,23,23,0.9);
+   color: var(--naranja);
+   padding: 20px;
+   border-color: var(--naranja);
+}
+
+.btn-realizar-operacion{
+   display: block;
+   margin-top: 10px;
+   width: 400px;
+   font-size: 25px;
+   background-color: var(--negro);
+   color: var(--naranja);
+   padding: 10px;
+   border-radius: 10px;
+   transition: ease-in-out .7s;
+}
+
+.btn-realizar-operacion:hover{
+   background-color: var(--naranja);
+   color: white;
+   cursor: pointer;
 }

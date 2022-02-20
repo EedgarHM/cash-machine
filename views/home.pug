@@ -1,12 +1,11 @@
 extends index 
 block contenido 
 
-    header.header
+    header.header.texto-centrado
         h1 Cash Machine
 
-    main
-    .container
-        h2 Seleccione una opcion
+    .main-container
+        h2.texto-centrado.ph2 Seleccione una opcion
         .container-buttons
-        a(href="/transacciones" class="btn") Realizar Operacion
-        a(href="/sign-in" class="btn") Registrarse
+            a(href="/transactions" class="btn texto-centrado texto-grande ") Realizar Operacion
+            a(href="/signup" class="btn texto-centrado texto-grande") Registrarse como cliente

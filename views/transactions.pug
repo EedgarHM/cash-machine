@@ -1,4 +1,68 @@
 extends index 
 block contenido 
 
-    h1 Que transaccion desea realizar
+    header.header.texto-centrado
+        h1 Seleccione la transaccion que deseas realizar
+
+
+    .container-buttons-transactions
+        
+        .transactions-container 
+            button(type='submit' class=`btn btn-transaccion` id="btnRetirar") Retirar
+            button(type='submit' class=`btn btn-transaccion` id="btnDepositar") Depositar
+            button(type='submit' class=`btn btn-transaccion` id="btnPagar") Pagar  
+            button(disabled="disabled" type='submit' class=`btn btn-transaccion` id="btnEstado") Estado de Cuenta    
+
+
+        .modal.modal-retirar
+            .form-container
+                h2.nombre-tarjeta.texto-centrado Retira tu dinero
+            
+                form(action="/withdrawals" method="POST")
+                    .container-tarjeta.texto-centrado
+                        .field
+                            input(class="campo-tarjeta" type="text" id="card" name="card" placeholder="Card Number")
+                        .field
+                            input(class="campo-tarjeta" type="number" id="cvv" name="cvv" placeholder="cvv")
+                        .field
+                            input(class="campo-tarjeta" type="number" id="mount" name="mount" placeholder="mount")
+                        .campo-enviar-tarjeta
+                            input(type="submit" value="Retirar Dinero" class="btn btn-enviar-tarjeta")    
+
+        .modal.modal-depositar
+            .form-container
+                h2.nombre-tarjeta.texto-centrado Deposita a tu cuenta
+                form(action="/deposit-money" method="POST")
+                    .container-tarjeta.texto-centrado
+                        .field
+                            label(for="card" User Name:)
+                            input(class="campo-tarjeta" type="text" id="card" name="card" placeholder="Card Number")
+                        .field
+                            label(for="mount" User Name:)
+                            input(class="campo-tarjeta" type="number" id="mount" name="mount" placeholder="mount")
+                        .campo-enviar-tarjeta
+                            input(type="submit" value="Depositar" class="btn btn-enviar-tarjeta")  
+
+        .modal.modal-pagar
+            .form-container
+                h2.nombre-tarjeta.texto-centrado Paga con tarjeta
+                form(action="/pay" method="POST")
+                    .container-tarjeta.texto-centrado
+                        .field
+                            label(for="card" User Name:)
+                            input(class="campo-tarjeta" type="text" id="card" name="card" placeholder="Card Number")
+                        .field
+                            label(for="cvv" User Name:)
+                            input(class="campo-tarjeta" type="number" id="cvv" name="cvv" placeholder="cvv")
+                        .field
+                            label(for="mount" User Name:)
+                            input(class="campo-tarjeta" type="number" id="mount" name="mount" placeholder="mount")
+                        .campo-enviar-tarjeta
+                            input(type="submit" value="Pagar" class="btn btn-enviar-tarjeta")   
+
+  
+
+
+    script(src='/js/main.js')
+
+     

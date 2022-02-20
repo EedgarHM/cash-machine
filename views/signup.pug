@@ -1,0 +1,17 @@
+extends index 
+block contenido 
+
+    header.header.texto-centrado
+        h1 Create User
+
+    .container-signup
+        form(action="/signup" method="POST")
+            .campos
+                label(for="name") User Name:
+                input(type="text" id="name" name="name" placeholder="User Name" class="campo-form")
+
+                label(for="lastName") Last Name:
+                input(type="text" id="lastName" name="lastName" placeholder="Last Name" class="campo-form")
+
+            
+                input(type="submit" value="Sign up" class="texto-centrado btn-enviar campo-form")        
