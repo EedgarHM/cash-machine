@@ -16,7 +16,7 @@ Abrir el proyecto con la terminal o consola de comandos, posicionarse en la carp
 
 Para que este proyecto funcione se necesita instalar el gestor de MySQL el link de descarga lo dejo a continuación, esta versión es la que se utilizó para desarrollar el proyecto. 
 
-https://dev.mysql.com/downloads/windows/installer/5.7.html
+https://dev.mysql.com/downloads/windows/installer/5.7.html  (Descargar la versión completa, pesa 524mb aprox)
 
 ##### Configurando MySQL
 
