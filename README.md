@@ -39,4 +39,4 @@ Una vez se haya clonado el repositorio, instalado los modulos necesarios de node
 * npm test
 * Si el comando anterior no funciona intentar con npm start
 
-Una vez ejecutado el comando, puede acceder a la la aplicación desde su navegador web haciendo uso del siguiente link: http://localhost:3000/transactions
+Una vez ejecutado el comando, puede acceder a la la aplicación desde su navegador web haciendo uso del siguiente link: http://localhost:3000
